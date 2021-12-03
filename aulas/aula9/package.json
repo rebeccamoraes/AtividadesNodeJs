@@ -1,0 +1,15 @@
+{
+  "name": "aula9",
+  "version": "1.0.0",
+  "description": "",
+  "main": "inicio.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Rebecca Moraes",
+  "license": "ISC",
+  "type": "module",
+  "devDependencies": {
+    "typescript": "^4.5.2"
+  }
+}
