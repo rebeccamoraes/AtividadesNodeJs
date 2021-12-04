@@ -11,13 +11,13 @@ class ContaRepository {
 
     async update(model) {
         return await ContaTable.update(model, {
-            wherer: { id: conta1.id}
+            where: { id: model.id}
         });
     }
 
     async delete(id) {
         return await ContaTable.destroy({
-            where: {id: 1}
+            where: {id: id}
         });
     }
 }
