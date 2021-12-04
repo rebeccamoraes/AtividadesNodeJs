@@ -1,4 +1,5 @@
 import Database from './Database.js';
+import ContaTable from './ClienteTable.js';
 
 Database
     .sync()
