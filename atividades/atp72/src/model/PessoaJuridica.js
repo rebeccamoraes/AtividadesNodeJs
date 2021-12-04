@@ -4,6 +4,7 @@ class PessoaJuridica extends Pessoa {
     #cnpj;
 
     constructor(cnpj) {
+        super();
         this.#cnpj = cnpj;
     }
 
@@ -14,3 +15,5 @@ class PessoaJuridica extends Pessoa {
         this.#cnpj = cnpj;
     }
 }
+
+export default PessoaJuridica;
