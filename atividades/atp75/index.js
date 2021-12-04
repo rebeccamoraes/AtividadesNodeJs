@@ -1,18 +1,8 @@
-import Cliente from "./model/Cliente.js";
-import ClienteRepository from "./repository/ClienteRepository.js";
+import Express from "express";
+import bodyParser from "body-parser";
+import ClienteApi from "./api/ClienteApi.js";
 
-const repository = new ClienteRepository();
-
-const cliente = new Cliente();
-cliente.id = 2;
-cliente.nome = "Rebecca";
-console.log(cliente.nome);
-
-// const result = await repository.create(cliente);
-const result = await repository.update(cliente);
-console.log(result);
-
-const result2 = await repository.delete(1);
-
-const clientes = await repository.findAll()
-console.log(clientes);
+const api = Express();
+api.use(bodyParser.json());
+api.listen(3000, () => console.log("Rodando.."));
+api.use('/api/cliente', ClienteApi);
